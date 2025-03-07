@@ -153,11 +153,11 @@ Optional (point 5): considered for acceptance (passes all automated checks).
 ## Test results
 
 For the original test results, you can refer to [`./result_images`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/tree/main/result_images). Since the test results were rendered into **images**, the test results 
-were under [`./result_images`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/tree/main/result_images). Although there were **fails** when we deployed it locally, these fails didn't affect our target issue. To be specific, [`test_agg`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/tree/main/result_images/test_agg) and [`test_text`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/tree/main/result_images/test_text) are directly affected by our refactoring.
+were under [`./result_images`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/tree/main/result_images). Although there were some **fails** when we deployed it locally, these fails didn't affect our target issue. To be specific, [`test_agg`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/tree/main/result_images/test_agg) and [`test_text`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/tree/main/result_images/test_text) are directly affected by our refactoring.
 
-Unfortunately, after our refactoring, we failed to pass the origianl tests.
+After our refactoring, we were able to pass most of the original tests. Only two tests in `test_text.py` are still failing, related to a ***parse_math*** flag not working properly when placing text in a figure. In the failing test, text which should not be parsed as math still is when the flag is not set, which has a connection to our solution since a lot of regular text will be in math mode. This would have to be resolved properly in order for the bugfix to be accepted.
 
-For the test results, you can refer to [./resources](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/tree/main/resources).
+For the test results, you can refer to [`./resources`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/tree/main/resources), where there is both images showing the bug solved and test logs from the tests. There are logs for both the tests difectly impacted by the bugfix ([`test_text.log`](resources/test_text.log), [`test_agg.log`](resources/test_agg.log), [`test_mathtext`](resources/test_mathtext.log)) and for the whole program, before and after the bugfix ([`test_log_full_before_fix`](resources/test_log_full_before_fix.log), [`test_log_full_after_fix`](resources/test_log_full_after_fix.log))
 
 ## UML class diagram and its description
 
