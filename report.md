@@ -1,9 +1,5 @@
 # Report for assignment 4
 
-This is a template for your report. You are free to modify it as needed.
-It is not required to use markdown for your report either, but the report
-has to be delivered in a standard, cross-platform format.
-
 ## Project
 
 Name: matplotlib
@@ -36,12 +32,12 @@ For each team member, how much time was spent in
 |:---:|:-----------:|:---------------:|:---:|:---:|
 |1  |2  |2  |2  |2  |
 |2  |1  |1  |1  |1  |
-|3  |1  |0  |2  |0  |
-|4  |20min  |30min  |0  |0  |
-|5  |10  |0  |6  |0  |
-|6  |5  |0  |8  |0  |
+|3  |1  |0  |2  |5  |
+|4  |20min  |15min  |0  |30min  |
+|5  |10  |0  |6  |8  |
+|6  |5  |0  |8  |3  |
 |7  |5  |0  |1  |0  |
-|8  |1  |0  |0  |0  |
+|8  |1  |0  |0  |1  |
 
 1. plenary discussions/meetings;
 
@@ -148,16 +144,18 @@ For a clean patch, please refer to [`Commit 49b7d8a`](https://github.com/florals
 
 However, the above commit is for the optional point 4, so generally there're no code changes, the main change is "removing unused code and adding comments". The **code changes** are mainly in the following commits: the first try is [`Commit 91a389d`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/commit/91a389d9754209c6abf2ea96dee2297cbc227f5c) and a better solution is [`Commit ad1196e`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/commit/ad1196ef9255e908b3db30f05a19d856812317cc#diff-2889b798b7f9a072d882bef4f0fc033db63538a9317df59fa963e9a82401bf40)
 
+Alternatively, run `git diff 03b74ea 49b7d8a lib/matplotlib/text.py lib/matplotlib/backends/backend_agg.py`.
+
 Optional (point 5): considered for acceptance (passes all automated checks).
 
 ## Test results
 
 For the original test results, you can refer to [`./result_images`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/tree/main/result_images). Since the test results were rendered into **images**, the test results 
-were under [`./result_images`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/tree/main/result_images). Although there were **fails** when we deployed it locally, these fails didn't affect our target issue. To be specific, [`test_agg`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/tree/main/result_images/test_agg) and [`test_text`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/tree/main/result_images/test_text) are directly affected by our refactoring.
+were under [`./result_images`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/tree/main/result_images). Although there were some **fails** when we deployed it locally, these fails didn't affect our target issue. To be specific, [`test_agg`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/tree/main/result_images/test_agg) and [`test_text`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/tree/main/result_images/test_text) are directly affected by our refactoring.
 
-Unfortunately, after our refactoring, we failed to pass the origianl tests.
+After our refactoring, we were able to pass most of the original tests. Only two tests in `test_text.py` are still failing, related to a ***parse_math*** flag not working properly when placing text in a figure. In the failing test, text which should not be parsed as math still is when the flag is not set, which has a connection to our solution since a lot of regular text will be in math mode. This would have to be resolved properly in order for the bugfix to be accepted.
 
-For the test results, you can refer to [./resources](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/tree/main/resources).
+For the test results, you can refer to [`./resources`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/tree/main/resources), where there is both images showing the bug solved and test logs from the tests. There are logs for both the tests difectly impacted by the bugfix ([`test_text.log`](resources/test_text.log), [`test_agg.log`](resources/test_agg.log), [`test_mathtext`](resources/test_mathtext.log)) and for the whole program, before and after the bugfix ([`test_log_full_before_fix`](resources/test_log_full_before_fix.log), [`test_log_full_after_fix`](resources/test_log_full_after_fix.log))
 
 ## UML class diagram and its description
 
