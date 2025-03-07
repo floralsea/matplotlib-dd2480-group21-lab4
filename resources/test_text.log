@@ -1,0 +1,162 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0
+rootdir: /home/gwalle/matplotlib-dd2480-group21-lab4
+configfile: pyproject.toml
+plugins: rerunfailures-15.0, cov-6.0.0, timeout-2.3.1, xdist-3.6.1
+collected 119 items
+
+lib/matplotlib/tests/test_text.py ..s..s..s............s..s............. [ 31%]
+...............s.................ss.....................FF.........s..s. [ 92%]
+.........                                                                [100%]
+
+=================================== FAILURES ===================================
+_______________________________ test_parse_math ________________________________
+
+    @pytest.mark.xfail(pyparsing_version.release == (3, 1, 0),
+                       reason="Error messages are incorrect with pyparsing 3.1.0")
+    def test_parse_math():
+        fig, ax = plt.subplots()
+        ax.text(0, 0, r"$ \wrong{math} $", parse_math=False)
+>       fig.canvas.draw()
+
+lib/matplotlib/tests/test_text.py:843: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+lib/matplotlib/backends/backend_agg.py:395: in draw
+    self.figure.draw(self.renderer)
+lib/matplotlib/artist.py:94: in draw_wrapper
+    result = draw(artist, renderer, *args, **kwargs)
+lib/matplotlib/artist.py:71: in draw_wrapper
+    return draw(artist, renderer)
+lib/matplotlib/figure.py:3248: in draw
+    mimage._draw_list_compositing_images(
+lib/matplotlib/image.py:134: in _draw_list_compositing_images
+    a.draw(renderer)
+lib/matplotlib/artist.py:71: in draw_wrapper
+    return draw(artist, renderer)
+lib/matplotlib/axes/_base.py:3205: in draw
+    mimage._draw_list_compositing_images(
+lib/matplotlib/image.py:134: in _draw_list_compositing_images
+    a.draw(renderer)
+lib/matplotlib/artist.py:71: in draw_wrapper
+    return draw(artist, renderer)
+lib/matplotlib/text.py:858: in draw
+    textrenderer.draw_text(gc, x, y, clean_line,
+lib/matplotlib/backends/backend_agg.py:198: in draw_text
+    return self.draw_mathtext(gc, x, y, s, prop, angle)
+lib/matplotlib/backends/backend_agg.py:182: in draw_mathtext
+    self.mathtext_parser.parse(s, self.dpi, prop,
+lib/matplotlib/mathtext.py:86: in parse
+    return self._parse_cached(s, dpi, prop, antialiased, load_glyph_flags)
+lib/matplotlib/mathtext.py:100: in _parse_cached
+    box = self._parser.parse(s, fontset, fontsize, dpi)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <matplotlib._mathtext.Parser object at 0x7ff641089a90>
+s = '$ \\wrong{math} $'
+fonts_object = <matplotlib._mathtext.BakomaFonts object at 0x7ff633b22750>
+fontsize = 12.0, dpi = 80.0
+
+    def parse(self, s: str, fonts_object: Fonts, fontsize: float, dpi: float) -> Hlist:
+        """
+        Parse expression *s* using the given *fonts_object* for
+        output, at the given *fontsize* and *dpi*.
+    
+        Returns the parse tree of `Node` instances.
+        """
+        self._state_stack = [
+            ParserState(fonts_object, 'default', 'rm', fontsize, dpi)]
+        self._em_width_cache: dict[tuple[str, float, float], float] = {}
+        try:
+            result = self._expression.parseString(s)
+        except ParseBaseException as err:
+            # explain becomes a plain method on pyparsing 3 (err.explain(0)).
+>           raise ValueError("\n" + ParseException.explain(err, 0)) from None
+E           ValueError: 
+E            \wrong{math} 
+E            ^
+E           ParseFatalException: Unknown symbol: \wrong, found '\'  (at char 1), (line:1, col:2)
+
+lib/matplotlib/_mathtext.py:2173: ValueError
+------------------------------ Captured log setup ------------------------------
+WARNING  matplotlib.testing:__init__.py:40 Could not set locale to English/United States. Some date-related tests may fail.
+___________________________ test_parse_math_rcparams ___________________________
+
+    @pytest.mark.xfail(pyparsing_version.release == (3, 1, 0),
+                       reason="Error messages are incorrect with pyparsing 3.1.0")
+    def test_parse_math_rcparams():
+        # Default is True
+        fig, ax = plt.subplots()
+        ax.text(0, 0, r"$ \wrong{math} $")
+        with pytest.raises(ValueError, match='Unknown symbol'):
+            fig.canvas.draw()
+    
+        # Setting rcParams to False
+        with mpl.rc_context({'text.parse_math': False}):
+            fig, ax = plt.subplots()
+            ax.text(0, 0, r"$ \wrong{math} $")
+>           fig.canvas.draw()
+
+lib/matplotlib/tests/test_text.py:864: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+lib/matplotlib/backends/backend_agg.py:395: in draw
+    self.figure.draw(self.renderer)
+lib/matplotlib/artist.py:94: in draw_wrapper
+    result = draw(artist, renderer, *args, **kwargs)
+lib/matplotlib/artist.py:71: in draw_wrapper
+    return draw(artist, renderer)
+lib/matplotlib/figure.py:3248: in draw
+    mimage._draw_list_compositing_images(
+lib/matplotlib/image.py:134: in _draw_list_compositing_images
+    a.draw(renderer)
+lib/matplotlib/artist.py:71: in draw_wrapper
+    return draw(artist, renderer)
+lib/matplotlib/axes/_base.py:3205: in draw
+    mimage._draw_list_compositing_images(
+lib/matplotlib/image.py:134: in _draw_list_compositing_images
+    a.draw(renderer)
+lib/matplotlib/artist.py:71: in draw_wrapper
+    return draw(artist, renderer)
+lib/matplotlib/text.py:858: in draw
+    textrenderer.draw_text(gc, x, y, clean_line,
+lib/matplotlib/backends/backend_agg.py:198: in draw_text
+    return self.draw_mathtext(gc, x, y, s, prop, angle)
+lib/matplotlib/backends/backend_agg.py:182: in draw_mathtext
+    self.mathtext_parser.parse(s, self.dpi, prop,
+lib/matplotlib/mathtext.py:86: in parse
+    return self._parse_cached(s, dpi, prop, antialiased, load_glyph_flags)
+lib/matplotlib/mathtext.py:100: in _parse_cached
+    box = self._parser.parse(s, fontset, fontsize, dpi)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <matplotlib._mathtext.Parser object at 0x7ff641089a90>
+s = '$ \\wrong{math} $'
+fonts_object = <matplotlib._mathtext.BakomaFonts object at 0x7ff6406997d0>
+fontsize = 12.0, dpi = 80.0
+
+    def parse(self, s: str, fonts_object: Fonts, fontsize: float, dpi: float) -> Hlist:
+        """
+        Parse expression *s* using the given *fonts_object* for
+        output, at the given *fontsize* and *dpi*.
+    
+        Returns the parse tree of `Node` instances.
+        """
+        self._state_stack = [
+            ParserState(fonts_object, 'default', 'rm', fontsize, dpi)]
+        self._em_width_cache: dict[tuple[str, float, float], float] = {}
+        try:
+            result = self._expression.parseString(s)
+        except ParseBaseException as err:
+            # explain becomes a plain method on pyparsing 3 (err.explain(0)).
+>           raise ValueError("\n" + ParseException.explain(err, 0)) from None
+E           ValueError: 
+E            \wrong{math} 
+E            ^
+E           ParseFatalException: Unknown symbol: \wrong, found '\'  (at char 1), (line:1, col:2)
+
+lib/matplotlib/_mathtext.py:2173: ValueError
+------------------------------ Captured log setup ------------------------------
+WARNING  matplotlib.testing:__init__.py:40 Could not set locale to English/United States. Some date-related tests may fail.
+=========================== short test summary info ============================
+FAILED lib/matplotlib/tests/test_text.py::test_parse_math - ValueError: 
+FAILED lib/matplotlib/tests/test_text.py::test_parse_math_rcparams - ValueErr...
+================== 2 failed, 107 passed, 10 skipped in 6.39s ===================
