@@ -53,7 +53,7 @@ For each team member, how much time was spent in
 
 7. writing code;
 
-8. running code?
+8. running tesing code;
 
 For setting up tools and libraries (step 4), enumerate all dependencies
 you took care of and where you spent your time, if that time exceeds
