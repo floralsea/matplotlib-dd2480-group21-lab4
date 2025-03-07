@@ -1,9 +1,5 @@
 # Report for assignment 4
 
-This is a template for your report. You are free to modify it as needed.
-It is not required to use markdown for your report either, but the report
-has to be delivered in a standard, cross-platform format.
-
 ## Project
 
 Name: matplotlib
@@ -36,12 +32,12 @@ For each team member, how much time was spent in
 |:---:|:-----------:|:---------------:|:---:|:---:|
 |1  |2  |2  |2  |2  |
 |2  |1  |1  |1  |1  |
-|3  |1  |0  |2  |0  |
-|4  |20min  |15min  |0  |0  |
-|5  |10  |0  |6  |0  |
-|6  |5  |0  |8  |0  |
+|3  |1  |0  |2  |5  |
+|4  |20min  |15min  |0  |30min  |
+|5  |10  |0  |6  |8  |
+|6  |5  |0  |8  |3  |
 |7  |5  |0  |1  |0  |
-|8  |1  |0  |0  |0  |
+|8  |1  |0  |0  |1  |
 
 1. plenary discussions/meetings;
 
@@ -147,6 +143,8 @@ Optional (point 4): the patch is clean.
 For a clean patch, please refer to [`Commit 49b7d8a`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/commit/49b7d8a758991904d77fec08ae3f85eb81532fb9.patch).
 
 However, the above commit is for the optional point 4, so generally there're no code changes, the main change is "removing unused code and adding comments". The **code changes** are mainly in the following commits: the first try is [`Commit 91a389d`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/commit/91a389d9754209c6abf2ea96dee2297cbc227f5c) and a better solution is [`Commit ad1196e`](https://github.com/floralsea/matplotlib-dd2480-group21-lab4/commit/ad1196ef9255e908b3db30f05a19d856812317cc#diff-2889b798b7f9a072d882bef4f0fc033db63538a9317df59fa963e9a82401bf40)
+
+Alternatively, run `git diff 03b74ea 49b7d8a lib/matplotlib/text.py lib/matplotlib/backends/backend_agg.py`.
 
 Optional (point 5): considered for acceptance (passes all automated checks).
 
