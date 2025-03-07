@@ -1,0 +1,33 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0
+rootdir: /home/gwalle/matplotlib-dd2480-group21-lab4
+configfile: pyproject.toml
+plugins: rerunfailures-15.0, cov-6.0.0, timeout-2.3.1, xdist-3.6.1
+collected 1642 items
+
+lib/matplotlib/tests/test_mathtext.py ......................s.......s... [  2%]
+s...............................ss.........s............................ [  6%]
+s.......s...s...............................ss.........s................ [ 10%]
+............s.......s...s...............................ss.........s.... [ 15%]
+........................s.......s...s...............................ss.. [ 19%]
+.......s............................s.......s...s....................... [ 23%]
+........ss.........s............................s.......s...s........... [ 28%]
+....................ss.........s............................s.......s... [ 32%]
+s...............................ss.........s............................ [ 37%]
+s.......s...s...............................ss.........s................ [ 41%]
+............s.......s...s...............................ss.........s.... [ 45%]
+........................s.......s...s...............................ss.. [ 50%]
+.......s......ssssssssssssssssssssssssssssssssssssssssssssssssssssssssss [ 54%]
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss [ 59%]
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss [ 63%]
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss [ 67%]
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss [ 72%]
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss [ 76%]
+ssss................................sssssssss........................... [ 80%]
+.............................sssssssss.................................. [ 85%]
+......................sssssssss......................................... [ 89%]
+...............sssssssss................................................ [ 94%]
+........sssssssss....................................................... [ 98%]
+........................                                                 [100%]
+
+====================== 1115 passed, 527 skipped in 18.27s ======================

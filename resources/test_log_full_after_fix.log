@@ -1,0 +1,661 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0
+rootdir: /home/gwalle/matplotlib-dd2480-group21-lab4
+configfile: pyproject.toml
+plugins: rerunfailures-15.0, cov-6.0.0, timeout-2.3.1, xdist-3.6.1
+collected 9849 items
+
+lib/matplotlib/tests/test_afm.py .........                               [  0%]
+lib/matplotlib/tests/test_agg.py .................                       [  0%]
+lib/matplotlib/tests/test_agg_filter.py s..                              [  0%]
+lib/matplotlib/tests/test_animation.py ...ssssssss............ssssssss.. [  0%]
+..........ssssss..s.................                                     [  0%]
+lib/matplotlib/tests/test_api.py ............                            [  1%]
+lib/matplotlib/tests/test_arrow_patches.py ..s.......                    [  1%]
+lib/matplotlib/tests/test_artist.py ....s....s......................     [  1%]
+lib/matplotlib/tests/test_axes.py .....s..s..s........s....s............ [  1%]
+.s...........s...........s......s..s.............s.....s..s...s........s [  2%]
+..s..s.....s...................s...s...s..s..s..s..s..s..s..s........... [  3%]
+..........s........s.................................s..s..s..s...s..... [  4%]
+........................................................................ [  4%]
+...s..s..s................s................s.......s.................... [  5%]
+...............s....s...s.........s......s..s....s........s..s..s....... [  6%]
+s............................s..s..s....s..s......................s..s.. [  7%]
+s..s..s..........s..s................................................... [  7%]
+...s..s................................................................. [  8%]
+.......................................s................................ [  9%]
+........................................................................ [  9%]
+..................................................................s..... [ 10%]
+....................................................s.......             [ 11%]
+lib/matplotlib/tests/test_axis.py ......                                 [ 11%]
+lib/matplotlib/tests/test_backend_bases.py ............................. [ 11%]
+.......s................................................................ [ 12%]
+.....                                                                    [ 12%]
+lib/matplotlib/tests/test_backend_cairo.py .                             [ 12%]
+lib/matplotlib/tests/test_backend_gtk3.py x.                             [ 12%]
+lib/matplotlib/tests/test_backend_inline.py .                            [ 12%]
+lib/matplotlib/tests/test_backend_macosx.py ssss                         [ 12%]
+lib/matplotlib/tests/test_backend_nbagg.py .                             [ 12%]
+lib/matplotlib/tests/test_backend_pdf.py .......................ss.      [ 12%]
+lib/matplotlib/tests/test_backend_pgf.py ss.ssss..s..ssssss.s..s         [ 13%]
+lib/matplotlib/tests/test_backend_ps.py ........ssss.................... [ 13%]
+....................                                                     [ 13%]
+lib/matplotlib/tests/test_backend_qt.py ................................ [ 13%]
+.                                                                        [ 13%]
+lib/matplotlib/tests/test_backend_registry.py .....................s.... [ 14%]
+......                                                                   [ 14%]
+lib/matplotlib/tests/test_backend_svg.py .s..s.ss..s..ss.............ss. [ 14%]
+.........ssssssssss..                                                    [ 14%]
+lib/matplotlib/tests/test_backend_template.py .....                      [ 14%]
+lib/matplotlib/tests/test_backend_tk.py ........                         [ 14%]
+lib/matplotlib/tests/test_backend_tools.py ...........                   [ 14%]
+lib/matplotlib/tests/test_backend_webagg.py ...                          [ 15%]
+lib/matplotlib/tests/test_backends_interactive.py ss.sss.s.....s.sss.sss [ 15%]
+.s.....sssss.sssXs.RRRF.X.x.s.s.s.ss.sss.s.......sss.sss.s.s.s.s.s.ss.ss [ 15%]
+s.s.F...s.sss.sss.sssssssssss.sss.sssssssssss.sss.sssssssssss.sss.ssssss [ 16%]
+sss                                                                      [ 16%]
+lib/matplotlib/tests/test_basic.py ...                                   [ 16%]
+lib/matplotlib/tests/test_bbox_tight.py ..s..s.....s..s.....             [ 16%]
+lib/matplotlib/tests/test_bezier.py .                                    [ 16%]
+lib/matplotlib/tests/test_category.py .................................. [ 17%]
+......................................x..x..x..x..x..x..x..x....         [ 17%]
+lib/matplotlib/tests/test_cbook.py ..................................... [ 18%]
+......................................s.s..................              [ 18%]
+lib/matplotlib/tests/test_collections.py ..s..s..s..s..s..s..s..s..s..s. [ 19%]
+.s..s................................................................... [ 19%]
+...s.                                                                    [ 20%]
+lib/matplotlib/tests/test_colorbar.py .................................. [ 20%]
+..........................s..............                                [ 20%]
+lib/matplotlib/tests/test_colors.py .................................... [ 21%]
+........................................................................ [ 21%]
+........................................................................ [ 22%]
+........................................................................ [ 23%]
+..................................s......................                [ 23%]
+lib/matplotlib/tests/test_compare_images.py .......                      [ 23%]
+lib/matplotlib/tests/test_constrainedlayout.py ......................... [ 24%]
+......................                                                   [ 24%]
+lib/matplotlib/tests/test_container.py ...                               [ 24%]
+lib/matplotlib/tests/test_contour.py .................s........s........ [ 24%]
+.............................................                            [ 25%]
+lib/matplotlib/tests/test_cycles.py ............                         [ 25%]
+lib/matplotlib/tests/test_dates.py ..................................... [ 25%]
+.....................................................                    [ 26%]
+lib/matplotlib/tests/test_datetime.py .x..x......x..x.......x.x..x.xxx.. [ 26%]
+x.xx....x.xxxxxx.                                                        [ 26%]
+lib/matplotlib/tests/test_determinism.py ............                    [ 26%]
+lib/matplotlib/tests/test_doc.py .                                       [ 26%]
+lib/matplotlib/tests/test_dviread.py ..                                  [ 27%]
+lib/matplotlib/tests/test_figure.py .s.........s..s.....s....s.......... [ 27%]
+...................................ss................................... [ 28%]
+................................................                         [ 28%]
+lib/matplotlib/tests/test_font_manager.py .........sss...s.........      [ 28%]
+lib/matplotlib/tests/test_fontconfig_pattern.py ...                      [ 28%]
+lib/matplotlib/tests/test_ft2font.py ................................... [ 29%]
+......................                                                   [ 29%]
+lib/matplotlib/tests/test_getattr.py ......ssss......................... [ 29%]
+........................................................................ [ 30%]
+.......                                                                  [ 30%]
+lib/matplotlib/tests/test_gridspec.py .....                              [ 30%]
+lib/matplotlib/tests/test_image.py ..s.............s..................s. [ 31%]
+................s..s.....s.s...s..s..s..s..............s..s.....s....s.. [ 31%]
+...........................s..s........s................................ [ 32%]
+.ss                                                                      [ 32%]
+lib/matplotlib/tests/test_inset.py .......                               [ 32%]
+lib/matplotlib/tests/test_legend.py ...s..s..s....s......s..s..s..s..s.. [ 32%]
+........................................................................ [ 33%]
+........................s...............                                 [ 34%]
+lib/matplotlib/tests/test_lines.py ......s..........s....s...s.......s.. [ 34%]
+.s...                                                                    [ 34%]
+lib/matplotlib/tests/test_marker.py ..........................s...s...s. [ 34%]
+...............                                                          [ 35%]
+lib/matplotlib/tests/test_mathtext.py ......................s.......s... [ 35%]
+s...............................ss.........s............................ [ 36%]
+s.......s...s...............................ss.........s................ [ 36%]
+............s.......s...s...............................ss.........s.... [ 37%]
+........................s.......s...s...............................ss.. [ 38%]
+.......s............................s.......s...s....................... [ 39%]
+........ss.........s............................s.......s...s........... [ 39%]
+....................ss.........s............................s.......s... [ 40%]
+s...............................ss.........s............................ [ 41%]
+s.......s...s...............................ss.........s................ [ 41%]
+............s.......s...s...............................ss.........s.... [ 42%]
+........................s.......s...s...............................ss.. [ 43%]
+.......s......ssssssssssssssssssssssssssssssssssssssssssssssssssssssssss [ 44%]
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss [ 44%]
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss [ 45%]
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss [ 46%]
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss [ 47%]
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss [ 47%]
+ssss................................sssssssss........................... [ 48%]
+.............................sssssssss.................................. [ 49%]
+......................sssssssss......................................... [ 50%]
+...............sssssssss................................................ [ 50%]
+........sssssssss....................................................... [ 51%]
+........................                                                 [ 51%]
+lib/matplotlib/tests/test_matplotlib.py ........                         [ 51%]
+lib/matplotlib/tests/test_mixedmathtext.py ..                            [ 51%]
+lib/matplotlib/tests/test_mlab.py ...................................... [ 52%]
+........................................................................ [ 52%]
+........................................................................ [ 53%]
+........................................................................ [ 54%]
+........................................................................ [ 55%]
+........................................................................ [ 55%]
+........................................................................ [ 56%]
+........................................................................ [ 57%]
+........................................................................ [ 58%]
+........................................................................ [ 58%]
+........................................................................ [ 59%]
+........................................................................ [ 60%]
+........................................................................ [ 60%]
+........................................................................ [ 61%]
+........................................................................ [ 62%]
+........................................................................ [ 63%]
+........................................................................ [ 63%]
+........................................................................ [ 64%]
+........................................................................ [ 65%]
+........................................................................ [ 66%]
+........................................................................ [ 66%]
+........................................................................ [ 67%]
+........................................................................ [ 68%]
+........................................................................ [ 69%]
+........................................................................ [ 69%]
+........................................................................ [ 70%]
+........................................................................ [ 71%]
+........................................................................ [ 71%]
+........................................................................ [ 72%]
+........................................................................ [ 73%]
+........................................................................ [ 74%]
+........................................................................ [ 74%]
+........................................................................ [ 75%]
+........................................................................ [ 76%]
+............................................................             [ 76%]
+lib/matplotlib/tests/test_multivariate_colormaps.py ...................  [ 77%]
+lib/matplotlib/tests/test_offsetbox.py ..s.............................. [ 77%]
+........................................................................ [ 78%]
+........................................................................ [ 78%]
+........................................................................ [ 79%]
+...................................s...                                  [ 80%]
+lib/matplotlib/tests/test_patches.py .........s..s..s...s.....s...s..... [ 80%]
+......ss...............s.s...s.....s......                               [ 80%]
+lib/matplotlib/tests/test_path.py ....................s.......s......... [ 81%]
+.......................................................                  [ 81%]
+lib/matplotlib/tests/test_patheffects.py ..s..s..s.....s...              [ 81%]
+lib/matplotlib/tests/test_pickle.py .................................... [ 82%]
+........................................................................ [ 83%]
+........................................................................ [ 83%]
+...................                                                      [ 83%]
+lib/matplotlib/tests/test_png.py ...                                     [ 84%]
+lib/matplotlib/tests/test_polar.py ..s..s....s..s..s..s..s..s....s..s... [ 84%]
+s.......................                                                 [ 84%]
+lib/matplotlib/tests/test_preprocess_data.py .................           [ 84%]
+lib/matplotlib/tests/test_pyplot.py F............................        [ 85%]
+lib/matplotlib/tests/test_quiver.py ...........................          [ 85%]
+lib/matplotlib/tests/test_rcparams.py .................................. [ 85%]
+........................................................................ [ 86%]
+........................................................................ [ 87%]
+...............................................                          [ 87%]
+lib/matplotlib/tests/test_sankey.py ....................                 [ 87%]
+lib/matplotlib/tests/test_scale.py ..s..................                 [ 88%]
+lib/matplotlib/tests/test_simplification.py ..s..s..s..............s..s. [ 88%]
+.s..s..s....s..s..s..                                                    [ 88%]
+lib/matplotlib/tests/test_skew.py ..s..s                                 [ 88%]
+lib/matplotlib/tests/test_sphinxext.py .......                           [ 88%]
+lib/matplotlib/tests/test_spines.py ...s..s...s...s                      [ 88%]
+lib/matplotlib/tests/test_streamplot.py ...s...s........                 [ 89%]
+lib/matplotlib/tests/test_style.py .................                     [ 89%]
+lib/matplotlib/tests/test_subplots.py .........s........................ [ 89%]
+.........                                                                [ 89%]
+lib/matplotlib/tests/test_table.py ...........                           [ 89%]
+lib/matplotlib/tests/test_testing.py x..xxx..s                           [ 89%]
+lib/matplotlib/tests/test_texmanager.py ...........                      [ 89%]
+lib/matplotlib/tests/test_text.py ..s..s..s............s..s............. [ 90%]
+...............s.................ss.....................FF.........s..s. [ 91%]
+.........                                                                [ 91%]
+lib/matplotlib/tests/test_textpath.py .                                  [ 91%]
+lib/matplotlib/tests/test_ticker.py .................................... [ 91%]
+........................................................................ [ 92%]
+........................................................................ [ 93%]
+...s.................................................................... [ 93%]
+........................................................................ [ 94%]
+........................................................................ [ 95%]
+........................................................................ [ 95%]
+.................................................s...................    [ 96%]
+lib/matplotlib/tests/test_tightlayout.py ..s..s..s..s..s..s..s..s..s...s [ 96%]
+..............                                                           [ 97%]
+lib/matplotlib/tests/test_transforms.py ......................s......... [ 97%]
+.............................F......                                     [ 97%]
+lib/matplotlib/tests/test_triangulation.py ............................. [ 98%]
+...................s...                                                  [ 98%]
+lib/matplotlib/tests/test_type1font.py ......                            [ 98%]
+lib/matplotlib/tests/test_units.py .................                     [ 98%]
+lib/matplotlib/tests/test_usetex.py ....s..s......s........s             [ 98%]
+lib/matplotlib/tests/test_widgets.py x.................................. [ 99%]
+..................................................................s..... [ 99%]
+.............                                                            [100%]
+
+=================================== FAILURES ===================================
+__ test_interactive_thread_safety[MPLBACKEND=gtk3cairo-BACKEND_DEPS=cairo,gi] __
+
+env = {'BACKEND_DEPS': 'cairo,gi', 'MPLBACKEND': 'gtk3cairo'}
+
+    @pytest.mark.parametrize("env", _thread_safe_backends)
+    @pytest.mark.flaky(reruns=3)
+    def test_interactive_thread_safety(env):
+>       proc = _run_helper(_test_thread_impl, timeout=_test_timeout, extra_env=env)
+
+lib/matplotlib/tests/test_backends_interactive.py:334: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+lib/matplotlib/testing/__init__.py:128: in subprocess_run_helper
+    proc = subprocess_run_for_testing(
+lib/matplotlib/testing/__init__.py:96: in subprocess_run_for_testing
+    proc = subprocess.run(
+../miniconda3/envs/mpl-dev/lib/python3.13/subprocess.py:558: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+../miniconda3/envs/mpl-dev/lib/python3.13/subprocess.py:1221: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+../miniconda3/envs/mpl-dev/lib/python3.13/subprocess.py:2131: in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Popen: returncode: -9 args: ['/home/gwalle/miniconda3/envs/mpl-dev/bin/pyth...>
+endtime = 17255.025018131, orig_timeout = 20, stdout_seq = [], stderr_seq = []
+skip_check_and_raise = False
+
+    def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
+                       skip_check_and_raise=False):
+        """Convenience for checking if a timeout has expired."""
+        if endtime is None:
+            return
+        if skip_check_and_raise or _time() > endtime:
+>           raise TimeoutExpired(
+                    self.args, orig_timeout,
+                    output=b''.join(stdout_seq) if stdout_seq else None,
+                    stderr=b''.join(stderr_seq) if stderr_seq else None)
+E           subprocess.TimeoutExpired: Command '['/home/gwalle/miniconda3/envs/mpl-dev/bin/python3.13', '-c', "import importlib.util;_spec = importlib.util.spec_from_file_location('matplotlib.tests.test_backends_interactive', '/home/gwalle/matplotlib-dd2480-group21-lab4/lib/matplotlib/tests/test_backends_interactive.py');_module = importlib.util.module_from_spec(_spec);_spec.loader.exec_module(_module);_module._test_thread_impl()"]' timed out after 20 seconds
+
+../miniconda3/envs/mpl-dev/lib/python3.13/subprocess.py:1265: TimeoutExpired
+------------------------------ Captured log setup ------------------------------
+WARNING  matplotlib.testing:__init__.py:40 Could not set locale to English/United States. Some date-related tests may fail.
+------------------------------ Captured log setup ------------------------------
+WARNING  matplotlib.testing:__init__.py:40 Could not set locale to English/United States. Some date-related tests may fail.
+------------------------------ Captured log setup ------------------------------
+WARNING  matplotlib.testing:__init__.py:40 Could not set locale to English/United States. Some date-related tests may fail.
+------------------------------ Captured log setup ------------------------------
+WARNING  matplotlib.testing:__init__.py:40 Could not set locale to English/United States. Some date-related tests may fail.
+_____ test_interactive_timers[MPLBACKEND=gtk3cairo-BACKEND_DEPS=cairo,gi] ______
+
+env = {'BACKEND_DEPS': 'cairo,gi', 'MPLBACKEND': 'gtk3cairo'}
+
+    @pytest.mark.parametrize("env", _get_testable_interactive_backends())
+    def test_interactive_timers(env):
+        if env["MPLBACKEND"] == "gtk3cairo" and os.getenv("CI"):
+            pytest.skip("gtk3cairo timers do not work in remote CI")
+        if env["MPLBACKEND"] == "wx":
+            pytest.skip("wx backend is deprecated; tests failed on appveyor")
+>       _run_helper(_impl_test_interactive_timers,
+                    timeout=_test_timeout, extra_env=env)
+
+lib/matplotlib/tests/test_backends_interactive.py:688: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+lib/matplotlib/testing/__init__.py:128: in subprocess_run_helper
+    proc = subprocess_run_for_testing(
+lib/matplotlib/testing/__init__.py:96: in subprocess_run_for_testing
+    proc = subprocess.run(
+../miniconda3/envs/mpl-dev/lib/python3.13/subprocess.py:558: in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+../miniconda3/envs/mpl-dev/lib/python3.13/subprocess.py:1221: in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+../miniconda3/envs/mpl-dev/lib/python3.13/subprocess.py:2131: in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Popen: returncode: -9 args: ['/home/gwalle/miniconda3/envs/mpl-dev/bin/pyth...>
+endtime = 17313.307666185, orig_timeout = 20, stdout_seq = [], stderr_seq = []
+skip_check_and_raise = False
+
+    def _check_timeout(self, endtime, orig_timeout, stdout_seq, stderr_seq,
+                       skip_check_and_raise=False):
+        """Convenience for checking if a timeout has expired."""
+        if endtime is None:
+            return
+        if skip_check_and_raise or _time() > endtime:
+>           raise TimeoutExpired(
+                    self.args, orig_timeout,
+                    output=b''.join(stdout_seq) if stdout_seq else None,
+                    stderr=b''.join(stderr_seq) if stderr_seq else None)
+E           subprocess.TimeoutExpired: Command '['/home/gwalle/miniconda3/envs/mpl-dev/bin/python3.13', '-c', "import importlib.util;_spec = importlib.util.spec_from_file_location('matplotlib.tests.test_backends_interactive', '/home/gwalle/matplotlib-dd2480-group21-lab4/lib/matplotlib/tests/test_backends_interactive.py');_module = importlib.util.module_from_spec(_spec);_spec.loader.exec_module(_module);_module._impl_test_interactive_timers()"]' timed out after 20 seconds
+
+../miniconda3/envs/mpl-dev/lib/python3.13/subprocess.py:1265: TimeoutExpired
+------------------------------ Captured log setup ------------------------------
+WARNING  matplotlib.testing:__init__.py:40 Could not set locale to English/United States. Some date-related tests may fail.
+____________________________ test_pyplot_up_to_date ____________________________
+
+tmp_path = PosixPath('/tmp/pytest-of-gwalle/pytest-13/test_pyplot_up_to_date0')
+
+    def test_pyplot_up_to_date(tmp_path):
+        pytest.importorskip("black")
+    
+        gen_script = Path(mpl.__file__).parents[2] / "tools/boilerplate.py"
+        if not gen_script.exists():
+            pytest.skip("boilerplate.py not found")
+        orig_contents = Path(plt.__file__).read_text()
+        plt_file = tmp_path / 'pyplot.py'
+        plt_file.write_text(orig_contents, 'utf-8')
+    
+>       subprocess_run_for_testing(
+            [sys.executable, str(gen_script), str(plt_file)],
+            check=True)
+
+lib/matplotlib/tests/test_pyplot.py:24: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+lib/matplotlib/testing/__init__.py:96: in subprocess_run_for_testing
+    proc = subprocess.run(
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+input = None, capture_output = False, timeout = 60, check = True
+popenargs = (['/home/gwalle/miniconda3/envs/mpl-dev/bin/python3.13', '/home/gwalle/matplotlib-dd2480-group21-lab4/tools/boilerplate.py', '/tmp/pytest-of-gwalle/pytest-13/test_pyplot_up_to_date0/pyplot.py'],)
+kwargs = {'env': None, 'stderr': None, 'stdout': None, 'text': True}
+process = <Popen: returncode: 1 args: ['/home/gwalle/miniconda3/envs/mpl-dev/bin/pytho...>
+stdout = None, stderr = None, retcode = 1
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output & stderr attributes if those streams
+        were captured.
+    
+        If timeout (seconds) is given and the process takes too long,
+         a TimeoutExpired exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+>               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['/home/gwalle/miniconda3/envs/mpl-dev/bin/python3.13', '/home/gwalle/matplotlib-dd2480-group21-lab4/tools/boilerplate.py', '/tmp/pytest-of-gwalle/pytest-13/test_pyplot_up_to_date0/pyplot.py']' returned non-zero exit status 1.
+
+../miniconda3/envs/mpl-dev/lib/python3.13/subprocess.py:579: CalledProcessError
+------------------------------ Captured log setup ------------------------------
+WARNING  matplotlib.testing:__init__.py:40 Could not set locale to English/United States. Some date-related tests may fail.
+----------------------------- Captured stderr call -----------------------------
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/gwalle/miniconda3/envs/mpl-dev/lib/python3.13/site-packages/black.py", line 3758, in <module>
+    patched_main()
+    ~~~~~~~~~~~~^^
+  File "/home/gwalle/miniconda3/envs/mpl-dev/lib/python3.13/site-packages/black.py", line 3753, in patched_main
+    patch_click()
+    ~~~~~~~~~~~^^
+  File "/home/gwalle/miniconda3/envs/mpl-dev/lib/python3.13/site-packages/black.py", line 3742, in patch_click
+    from click import _unicodefun  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ImportError: cannot import name '_unicodefun' from 'click' (/home/gwalle/miniconda3/envs/mpl-dev/lib/python3.13/site-packages/click/__init__.py)
+Traceback (most recent call last):
+  File "/home/gwalle/matplotlib-dd2480-group21-lab4/tools/boilerplate.py", line 464, in <module>
+    build_pyplot(pyplot_path)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/home/gwalle/matplotlib-dd2480-group21-lab4/tools/boilerplate.py", line 384, in build_pyplot
+    subprocess.run(
+    ~~~~~~~~~~~~~~^
+        [sys.executable, "-m", "black", "--line-length=88", pyplot_path],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        check=True
+        ^^^^^^^^^^
+    )
+    ^
+  File "/home/gwalle/miniconda3/envs/mpl-dev/lib/python3.13/subprocess.py", line 579, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['/home/gwalle/miniconda3/envs/mpl-dev/bin/python3.13', '-m', 'black', '--line-length=88', PosixPath('/tmp/pytest-of-gwalle/pytest-13/test_pyplot_up_to_date0/pyplot.py')]' returned non-zero exit status 1.
+_______________________________ test_parse_math ________________________________
+
+    @pytest.mark.xfail(pyparsing_version.release == (3, 1, 0),
+                       reason="Error messages are incorrect with pyparsing 3.1.0")
+    def test_parse_math():
+        fig, ax = plt.subplots()
+        ax.text(0, 0, r"$ \wrong{math} $", parse_math=False)
+>       fig.canvas.draw()
+
+lib/matplotlib/tests/test_text.py:843: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+lib/matplotlib/backends/backend_agg.py:395: in draw
+    self.figure.draw(self.renderer)
+lib/matplotlib/artist.py:94: in draw_wrapper
+    result = draw(artist, renderer, *args, **kwargs)
+lib/matplotlib/artist.py:71: in draw_wrapper
+    return draw(artist, renderer)
+lib/matplotlib/figure.py:3248: in draw
+    mimage._draw_list_compositing_images(
+lib/matplotlib/image.py:134: in _draw_list_compositing_images
+    a.draw(renderer)
+lib/matplotlib/artist.py:71: in draw_wrapper
+    return draw(artist, renderer)
+lib/matplotlib/axes/_base.py:3205: in draw
+    mimage._draw_list_compositing_images(
+lib/matplotlib/image.py:134: in _draw_list_compositing_images
+    a.draw(renderer)
+lib/matplotlib/artist.py:71: in draw_wrapper
+    return draw(artist, renderer)
+lib/matplotlib/text.py:858: in draw
+    textrenderer.draw_text(gc, x, y, clean_line,
+lib/matplotlib/backends/backend_agg.py:198: in draw_text
+    return self.draw_mathtext(gc, x, y, s, prop, angle)
+lib/matplotlib/backends/backend_agg.py:182: in draw_mathtext
+    self.mathtext_parser.parse(s, self.dpi, prop,
+lib/matplotlib/mathtext.py:86: in parse
+    return self._parse_cached(s, dpi, prop, antialiased, load_glyph_flags)
+lib/matplotlib/mathtext.py:100: in _parse_cached
+    box = self._parser.parse(s, fontset, fontsize, dpi)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <matplotlib._mathtext.Parser object at 0x7f838e7ede80>
+s = '$ \\wrong{math} $'
+fonts_object = <matplotlib._mathtext.BakomaFonts object at 0x7f83a234fad0>
+fontsize = 12.0, dpi = 80.0
+
+    def parse(self, s: str, fonts_object: Fonts, fontsize: float, dpi: float) -> Hlist:
+        """
+        Parse expression *s* using the given *fonts_object* for
+        output, at the given *fontsize* and *dpi*.
+    
+        Returns the parse tree of `Node` instances.
+        """
+        self._state_stack = [
+            ParserState(fonts_object, 'default', 'rm', fontsize, dpi)]
+        self._em_width_cache: dict[tuple[str, float, float], float] = {}
+        try:
+            result = self._expression.parseString(s)
+        except ParseBaseException as err:
+            # explain becomes a plain method on pyparsing 3 (err.explain(0)).
+>           raise ValueError("\n" + ParseException.explain(err, 0)) from None
+E           ValueError: 
+E            \wrong{math} 
+E            ^
+E           ParseFatalException: Unknown symbol: \wrong, found '\'  (at char 1), (line:1, col:2)
+
+lib/matplotlib/_mathtext.py:2173: ValueError
+------------------------------ Captured log setup ------------------------------
+WARNING  matplotlib.testing:__init__.py:40 Could not set locale to English/United States. Some date-related tests may fail.
+___________________________ test_parse_math_rcparams ___________________________
+
+    @pytest.mark.xfail(pyparsing_version.release == (3, 1, 0),
+                       reason="Error messages are incorrect with pyparsing 3.1.0")
+    def test_parse_math_rcparams():
+        # Default is True
+        fig, ax = plt.subplots()
+        ax.text(0, 0, r"$ \wrong{math} $")
+        with pytest.raises(ValueError, match='Unknown symbol'):
+            fig.canvas.draw()
+    
+        # Setting rcParams to False
+        with mpl.rc_context({'text.parse_math': False}):
+            fig, ax = plt.subplots()
+            ax.text(0, 0, r"$ \wrong{math} $")
+>           fig.canvas.draw()
+
+lib/matplotlib/tests/test_text.py:864: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+lib/matplotlib/backends/backend_agg.py:395: in draw
+    self.figure.draw(self.renderer)
+lib/matplotlib/artist.py:94: in draw_wrapper
+    result = draw(artist, renderer, *args, **kwargs)
+lib/matplotlib/artist.py:71: in draw_wrapper
+    return draw(artist, renderer)
+lib/matplotlib/figure.py:3248: in draw
+    mimage._draw_list_compositing_images(
+lib/matplotlib/image.py:134: in _draw_list_compositing_images
+    a.draw(renderer)
+lib/matplotlib/artist.py:71: in draw_wrapper
+    return draw(artist, renderer)
+lib/matplotlib/axes/_base.py:3205: in draw
+    mimage._draw_list_compositing_images(
+lib/matplotlib/image.py:134: in _draw_list_compositing_images
+    a.draw(renderer)
+lib/matplotlib/artist.py:71: in draw_wrapper
+    return draw(artist, renderer)
+lib/matplotlib/text.py:858: in draw
+    textrenderer.draw_text(gc, x, y, clean_line,
+lib/matplotlib/backends/backend_agg.py:198: in draw_text
+    return self.draw_mathtext(gc, x, y, s, prop, angle)
+lib/matplotlib/backends/backend_agg.py:182: in draw_mathtext
+    self.mathtext_parser.parse(s, self.dpi, prop,
+lib/matplotlib/mathtext.py:86: in parse
+    return self._parse_cached(s, dpi, prop, antialiased, load_glyph_flags)
+lib/matplotlib/mathtext.py:100: in _parse_cached
+    box = self._parser.parse(s, fontset, fontsize, dpi)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <matplotlib._mathtext.Parser object at 0x7f838e7ede80>
+s = '$ \\wrong{math} $'
+fonts_object = <matplotlib._mathtext.BakomaFonts object at 0x7f834318f8d0>
+fontsize = 12.0, dpi = 80.0
+
+    def parse(self, s: str, fonts_object: Fonts, fontsize: float, dpi: float) -> Hlist:
+        """
+        Parse expression *s* using the given *fonts_object* for
+        output, at the given *fontsize* and *dpi*.
+    
+        Returns the parse tree of `Node` instances.
+        """
+        self._state_stack = [
+            ParserState(fonts_object, 'default', 'rm', fontsize, dpi)]
+        self._em_width_cache: dict[tuple[str, float, float], float] = {}
+        try:
+            result = self._expression.parseString(s)
+        except ParseBaseException as err:
+            # explain becomes a plain method on pyparsing 3 (err.explain(0)).
+>           raise ValueError("\n" + ParseException.explain(err, 0)) from None
+E           ValueError: 
+E            \wrong{math} 
+E            ^
+E           ParseFatalException: Unknown symbol: \wrong, found '\'  (at char 1), (line:1, col:2)
+
+lib/matplotlib/_mathtext.py:2173: ValueError
+------------------------------ Captured log setup ------------------------------
+WARNING  matplotlib.testing:__init__.py:40 Could not set locale to English/United States. Some date-related tests may fail.
+___________________________ test_scale_swapping[png] ___________________________
+
+ext = 'png', request = <FixtureRequest for <Function test_scale_swapping[png]>>
+args = (), kwargs = {}, file_name = 'test_scale_swapping[png]'
+fig_test = <Figure size 640x480 with 1 Axes>
+fig_ref = <Figure size 640x480 with 1 Axes>, figs = []
+test_image_path = PosixPath('/home/gwalle/matplotlib-dd2480-group21-lab4/result_images/test_transforms/test_scale_swapping[png].png')
+ref_image_path = PosixPath('/home/gwalle/matplotlib-dd2480-group21-lab4/result_images/test_transforms/test_scale_swapping[png]-expected.png')
+
+    @pytest.mark.parametrize("ext", extensions)
+    def wrapper(*args, ext, request, **kwargs):
+        if 'ext' in old_sig.parameters:
+            kwargs['ext'] = ext
+        if 'request' in old_sig.parameters:
+            kwargs['request'] = request
+    
+        file_name = "".join(c for c in request.node.name
+                            if c in ALLOWED_CHARS)
+        try:
+            fig_test = plt.figure("test")
+            fig_ref = plt.figure("reference")
+            with _collect_new_figures() as figs:
+                func(*args, fig_test=fig_test, fig_ref=fig_ref, **kwargs)
+            if figs:
+                raise RuntimeError('Number of open figures changed during '
+                                   'test. Make sure you are plotting to '
+                                   'fig_test or fig_ref, or if this is '
+                                   'deliberate explicitly close the '
+                                   'new figure(s) inside the test.')
+            test_image_path = result_dir / (file_name + "." + ext)
+            ref_image_path = result_dir / (file_name + "-expected." + ext)
+            fig_test.savefig(test_image_path)
+            fig_ref.savefig(ref_image_path)
+>           _raise_on_image_difference(
+                ref_image_path, test_image_path, tol=tol
+            )
+E           matplotlib.testing.exceptions.ImageComparisonFailure: images not close (RMS 5.790):
+E           	result_images/test_transforms/test_scale_swapping[png].png
+E           	result_images/test_transforms/test_scale_swapping[png]-expected.png
+E           	result_images/test_transforms/test_scale_swapping[png]-failed-diff.png
+
+lib/matplotlib/testing/decorators.py:423: ImageComparisonFailure
+------------------------------ Captured log setup ------------------------------
+WARNING  matplotlib.testing:__init__.py:40 Could not set locale to English/United States. Some date-related tests may fail.
+=========================== short test summary info ============================
+FAILED lib/matplotlib/tests/test_backends_interactive.py::test_interactive_thread_safety[MPLBACKEND=gtk3cairo-BACKEND_DEPS=cairo,gi]
+FAILED lib/matplotlib/tests/test_backends_interactive.py::test_interactive_timers[MPLBACKEND=gtk3cairo-BACKEND_DEPS=cairo,gi]
+FAILED lib/matplotlib/tests/test_pyplot.py::test_pyplot_up_to_date - subproce...
+FAILED lib/matplotlib/tests/test_text.py::test_parse_math - ValueError: 
+FAILED lib/matplotlib/tests/test_text.py::test_parse_math_rcparams - ValueErr...
+FAILED lib/matplotlib/tests/test_transforms.py::test_scale_swapping[png] - ma...
+= 6 failed, 8871 passed, 935 skipped, 35 xfailed, 2 xpassed, 3 rerun in 552.18s (0:09:12) =

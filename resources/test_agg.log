@@ -1,0 +1,10 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.2, pytest-8.3.5, pluggy-1.5.0
+rootdir: /home/gwalle/matplotlib-dd2480-group21-lab4
+configfile: pyproject.toml
+plugins: rerunfailures-15.0, cov-6.0.0, timeout-2.3.1, xdist-3.6.1
+collected 17 items
+
+lib/matplotlib/tests/test_agg.py .................                       [100%]
+
+============================== 17 passed in 4.17s ==============================
