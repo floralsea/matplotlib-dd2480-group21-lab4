@@ -34,9 +34,9 @@ For each team member, how much time was spent in
 |2  |1  |1  |1  |1  |
 |3  |1  |0  |2  |5  |
 |4  |20min  |15min  |0  |30min  |
-|5  |10  |0  |6  |8  |
-|6  |5  |0  |8  |3  |
-|7  |5  |0  |1  |0  |
+|5  |10  |5  |6  |8  |
+|6  |5  |3  |8  |3  |
+|7  |5  |1  |1  |0  |
 |8  |1  |0  |0  |1  |
 
 1. plenary discussions/meetings;
